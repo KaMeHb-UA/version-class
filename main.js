@@ -18,14 +18,16 @@ function getVersion(v){
         revision : 0
     };
 }
-// empty class for JSDoc
-class Version /* All about pretty code */ extends Object {};
 /**
- * Setts up the Version object
- * @param {String} str String for transformation to an Version object
- * @return {Version}
+ * Creates new one Version instance
  */
-function _version(str){
+class Version{
+    /**
+     * @param {String} str String to parse as version
+     */
+    constructor(str){}
+};
+Version = function(str){
     var shadowVal, _this = {},
         version = getVersion(str);
     function setShadow(){
@@ -67,4 +69,4 @@ function _version(str){
     setShadow();
     return new Proxy(shadowVal, handler);
 }
-module.exports = _version;
+module.exports = Version;
