@@ -1,3 +1,40 @@
+
+// Documentation
+
+/**
+ * Creates new one Version instance
+ */
+class Version{
+    /**
+     * @param {String} str String to parse as version
+     */
+    constructor(str){
+        this.channels = {
+            alpha: false,
+            beta: false,
+            stable: false
+        };
+        this.version = 0;
+        this.major = 0;
+        this.minor = 0;
+        this.revision = '';
+        
+        /**
+         * @return {String} String representation of version
+         */
+        function toString(){}
+        this.toString = toString;
+        
+        /**
+         * @return {Number} Number representation of version (for some reasons compatibility only!)
+         */
+        function valueOf(){}
+        this.valueOf = valueOf;
+    };
+};
+
+// Factical code
+
 function getVersion(v){
     if (v){
         let res = /(\d+)\.(\d+)\.(\d+)(-[a-z])?/.exec(v);
@@ -18,15 +55,6 @@ function getVersion(v){
         revision : 0
     };
 }
-/**
- * Creates new one Version instance
- */
-class Version{
-    /**
-     * @param {String} str String to parse as version
-     */
-    constructor(str){}
-};
 Version = function(str){
     var shadowVal, _this = {},
         version = getVersion(str);
