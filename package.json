@@ -1,0 +1,16 @@
+{
+    "name": "version-class",
+    "version": "0.0.0-a",
+    "main": "./main.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/KaMeHb-UA/version-class.git"
+    },
+    "description": "A little module for pretty versioning",
+    "license": "MIT",
+    "keywords": [
+        "version",
+        "class"
+    ],
+    "dependencies": {}
+}
